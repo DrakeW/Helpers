@@ -3,6 +3,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <iostream>
 
 
 std::vector<float> StringNumberConversion(std::string input, char div)
@@ -59,4 +60,19 @@ std::vector<std::string> StringSeperate(std::string input, char Seperator)
 		}
 	}
 	return Outputs;
+}
+
+
+std::vector<std::string> CombinedInputs()
+{
+	std::string Input;
+	int DataAmount;
+	std::cin >> DataAmount;
+	std::vector<std::string> AllInputs;
+	for (int i = 0; i < DataAmount; i++)
+	{
+		std::cin >> Input;
+		AllInputs.push_back(Input);
+	}
+	return AllInputs;
 }
