@@ -76,3 +76,14 @@ std::vector<std::string> CombinedInputs()
 	}
 	return AllInputs;
 }
+
+std::vector<char> StringToChars(std::string input)
+{
+	std::vector<char> Output;
+
+	for (int i = 0; i < input.size(); i++)
+	{
+		Output.push_back(input[i]);
+	}
+	return Output;
+}
