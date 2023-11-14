@@ -1,27 +1,35 @@
 #include "Helpers.h"
 
+using namespace std;
 
 int main()
 {
-	std::vector<std::string> AllInputs = CombinedInputs();
-
+	vector<string> AllInputs = CombinedInputs();
 	for (int i = 0; i < AllInputs.size(); i++)
 	{
-		std::vector<float> TrueInput = StringNumberConversion(AllInputs[i], ':');
-
-		float Time = TrueInput[1] / TrueInput[0];
-
-		if (Time <= 1)
+		string Output;
+		for (int c = 0; c < AllInputs[i].size(); c++)
 		{
-			std::cout << "Swerve" << std::endl;
+			switch (AllInputs[i][c])
+			{
+			case 'A':
+				Output.push_back('T');
+				break;
+			case 'T':
+				Output.push_back('A');
+				break;
+			case 'G':
+				Output.push_back('C');
+				break;
+			case 'C':
+				Output.push_back('G');
+				break;
+			default:
+				break;
+			}
 		}
-		else if (Time <= 5)
-		{
-			std::cout << "Break" << std::endl;
-		}
-		else
-		{
-			std::cout << "Safe" << std::endl;
-		}
+		cout << Output << endl;
 	}
+
+	return 0;
 }
