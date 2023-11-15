@@ -77,6 +77,18 @@ std::vector<std::string> CombinedInputs()
 	return AllInputs;
 }
 
+std::vector<std::string> CombinedInputs(int Amount)
+{
+	std::string Input;
+	std::vector<std::string> AllInputs;
+	for (int i = 0; i < Amount; i++)
+	{
+		std::cin >> Input;
+		AllInputs.push_back(Input);
+	}
+	return AllInputs;
+}
+
 std::vector<char> StringToChars(std::string input)
 {
 	std::vector<char> Output;
