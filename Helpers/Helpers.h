@@ -89,6 +89,19 @@ std::vector<std::string> CombinedInputs(int Amount)
 	return AllInputs;
 }
 
+std::string CondenseToString(std::vector<std::string> input)
+{
+	std::string Output;
+	for (int i = 0; i < input.size(); i++)
+	{
+		for (int c = 0; c < input[i].size(); c++)
+		{
+			Output.push_back(input[i][c]);
+		}
+	}
+	return Output;
+}
+
 std::vector<char> StringToChars(std::string input)
 {
 	std::vector<char> Output;
